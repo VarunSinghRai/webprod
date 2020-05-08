@@ -33,9 +33,9 @@ screenshot :https://github.com/VarunSinghRai/webprod/blob/master/images/Build%20
 
 job1 for prod: Create a freestyle Project with name "WebProd-job1" 
 in a similar manner create a job for the production site
-the only changes would be in step 2) and step 4)
-in step2) enter branch details as '/*master'
-and in step4) type in the command as  "cp * -rvf /lwweb/prod"
+1) the only changes would be in step 2) and step 4)
+2) in step2) enter branch details as '/*master'
+3) and in step4) type in the command as  "cp * -rvf /lwweb/prod"
 
 Before we setup job2 to deploy docker containers to host test and prod website, there few homeworks that needs to be done. 
 I am using a RedHat Linux 8.0 so depending on the Host OS, you might have to do the steps slightly different. 
