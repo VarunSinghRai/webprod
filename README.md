@@ -1,4 +1,4 @@
-Assignment for Devops with Assembly Line Training, Linux World! 
+Assignment for Devops with Assembly Line Training, Linux World!
 Automating using Jenkins, Git, Github to deploy dockers containers to host test and production website.
 And finally to Merge Branch Dev with Master Branch.
 Git is configured to work on two branches Master i.e. the production and the dev i.e. for the Test or developer
