@@ -52,8 +52,7 @@ I am using a RedHat Linux 8.0 so depending on the Host OS, you might have to do 
 2) chown jenkins /lwweb
 3) mkdir -p /lwweb/dev /lwweb/prod
 
-1) Now, we have to add Jenkins to sudoers and for that make some changes in the /etc/sudoers
-please add this two lines in the file
+1) Now, we have to add Jenkins to sudoers and for that make some changes in the /etc/sudoers, please add this two lines in the file.
 2) jenkins ALL=(ALL)       NOPASSWD: ALL
 3) %jenkins ALL=(ALL)       NOPASSWD: ALL
 
