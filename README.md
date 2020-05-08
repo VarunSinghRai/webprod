@@ -20,7 +20,8 @@ git clone https://github.com/VarunSinghRai/webprod
 
 Sequence 2 ( setting up Jenkins job)
 
-job1 for dev: Create a freestyle Project with name "WebDev-job1" 
+job1 for dev: Create a freestyle Project with name "WebDev-job1"
+
 1)check Github Project and fill in repository address https://github.com/VarunSinghRai/webprod
 screenshot :https://github.com/VarunSinghRai/webprod/blob/master/images/Github%20Project%20URL.JPG
 2)Source Code Managemet and check Git button, fill in the repository address as above, and the branch as '/*dev'
