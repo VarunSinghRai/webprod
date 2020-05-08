@@ -53,9 +53,9 @@ I am using a RedHat Linux 8.0 so depending on the Host OS, you might have to do 
 3) mkdir -p /lwweb/dev /lwweb/prod
 
 1) Now, we have to add Jenkins to sudoers and for that make some changes in the /etc/sudoers
-2) please add this two lines in the file
-3) jenkins ALL=(ALL)       NOPASSWD: ALL
-4) %jenkins ALL=(ALL)       NOPASSWD: ALL
+please add this two lines in the file
+2) jenkins ALL=(ALL)       NOPASSWD: ALL
+3) %jenkins ALL=(ALL)       NOPASSWD: ALL
 
 Now lets create job2 in Jenkins to deploy dockers containers to host our test and prod websites.
 
