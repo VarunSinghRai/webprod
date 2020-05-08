@@ -1,0 +1,8 @@
+if sudo docker ps -a | grep webdev
+then
+sudo docker stop webdev
+sudo docker rm -f webdev
+sudo docker run -i -t -d -p 8081:80 -v  /lwweb/dev:/usr/local/apache2/htdocs/ --name  webdev httpd
+else
+sudo docker run -i -t -d -p 8081:80 -v  /lwweb/dev:/usr/local/apache2/htdocs/ --name  webdev httpd
+fi
