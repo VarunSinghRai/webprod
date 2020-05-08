@@ -1,14 +1,22 @@
 Assignment for Devops with Assembly Line Training, Linux World! 
 Automating using Jenkins, Git, Github to deploy dockers containers to host test and production website.
+And finally to Merge Branch Dev with Master Branch.
 Git is configured to work on two branches Master i.e. the production and the dev i.e. for the Test or developer
 
 Sequence 1(setting up git) 
 open Git and clone repository "webprod"
 
 git clone https://github.com/VarunSinghRai/webprod
-
-Create a new branch dev
-git branch dev
+touch index.html linux.html 
+add index.html linux.html
+commit -m "update"
+git push -u
+git branch dev 
+git checkout 
+vi index.html 
+git add index.html
+git commit -m " "
+git push -f
 
 Sequence 2 ( setting up Jenkins job)
 
@@ -56,6 +64,41 @@ step 1) In Build Trigger section, check "Build after other projects are built", 
 Step 2)  In the Build section, select execute and type in this script. Refer this link 
 https://github.com/VarunSinghRai/webprod/blob/master/images/webdprod-job2-execute
 Step 3) Select Save and Apply
+
+We will also create a third job, this will be to merge branch 'dev' with our master branch  'master' in Github. 
+For making this happen, we need make our jenkins accessible to our Github repository. And for this you need to download ngrok, visit link https://ngrok.com/download
+
+Step 1) open terminal in Redhat Linux
+Step 2) extract the zip folder containing the .ngrok file
+Step 3) run the scrip, ./ngrok http 8080
+
+Now, in the Jenkins configure webhooks using link that you received after running .ngrok script
+in my case its http://b7ad53e1.ngrok.io
+Step 1) enter this details in Payload URL: http://cfb3a820.ngrok.io/github-webhook/
+Make sure entry always ends with / otherwise your webhook will not sync.
+screenshot: https://github.com/VarunSinghRai/webprod/blob/master/images/configure%20ngrok.JPG
+
+Finally, the third job to call the merge of branch dev onto master branch in Github.
+(to callin the merge first you will have to configure credentials, refer this link )
+Step 1) Create a freestyle Project with name "WebDev-Merge"
+Step 2)check Github Project and fill in repository address https://github.com/VarunSinghRai/webprod
+screenshot :https://github.com/VarunSinghRai/webprod/blob/master/images/Source%20Code%20Management%20with%20github%20creds.JPG
+Step 3) Click Add and select the Github credentials 
+Step 4) fill in the repository address as the above screenshot, and the branch as '/*dev'
+Step 5) Now configure Post build actions to Merge Branch dev with out master branch in github, refer screenshot
+https://github.com/VarunSinghRai/webprod/blob/master/images/Post%20build%20actions.JPG
+step 6) Click save and apply
+
+Test your system by updating Dev and Master Branch
+
+user curl to check your hosted docker containers 
+curl http://hostipaddress:8081
+curl http://hostipaddress:8082
+
+once satisfactory, run the build of Jenkins third job to call the merge.
+
+
+
 
 
 
