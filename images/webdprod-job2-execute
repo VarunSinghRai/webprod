@@ -1,0 +1,8 @@
+if sudo docker ps -a | grep webprod
+then
+sudo docker stop webprod
+sudo docker rm -f webprod
+sudo docker run -i -t -d -p 8082:80 -v  /lwweb/prod:/usr/local/apache2/htdocs/ --name  webprod httpd
+else
+sudo docker run -i -t -d -p 8082:80 -v  /lwweb/prod:/usr/local/apache2/htdocs/ --name  webprod httpd
+fi
