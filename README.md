@@ -24,12 +24,16 @@ job1 for dev: Create a freestyle Project with name "WebDev-job1"
 
 1)check Github Project and fill in repository address https://github.com/VarunSinghRai/webprod
 screenshot :https://github.com/VarunSinghRai/webprod/blob/master/images/Github%20Project%20URL.JPG
+
 2)Source Code Managemet and check Git button, fill in the repository address as above, and the branch as '/*dev'
 screenshot :https://github.com/VarunSinghRai/webprod/blob/master/images/Source%20Code%20Management.JPG
+
 3)Build Triggers, Check the box "GitHub hook trigger for GITScm polling"
 screenshot :https://github.com/VarunSinghRai/webprod/blob/master/images/Build%20Triggers.JPG
+
 4)Now lastly in Build section, select an Execute Shell and type in command "cp * -rvf /lwweb/dev"
 screenshot :https://github.com/VarunSinghRai/webprod/blob/master/images/Build%20Execute.JPG
+
 5)Click Save and Apply
 
 job1 for prod: Create a freestyle Project with name "WebProd-job1" 
