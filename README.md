@@ -7,16 +7,16 @@ Sequence 1(setting up git)
 open Git and clone repository "webprod"
 
 git clone https://github.com/VarunSinghRai/webprod
-touch index.html linux.html 
-add index.html linux.html
-commit -m "update"
-git push -u
-git branch dev 
-git checkout 
-vi index.html 
-git add index.html
-git commit -m " "
-git push -f
+1) touch index.html linux.html 
+2) git add index.html linux.html
+3) commit -m "update"
+4) git push -u
+5) git branch dev 
+6) git checkout 
+7) vi index.html 
+8) git add index.html
+9) git commit -m " "
+10) git push -f
 
 Sequence 2 ( setting up Jenkins job)
 
