@@ -65,7 +65,7 @@ screenshot : https://github.com/VarunSinghRai/webprod/blob/master/images/Build%2
 2) In the Build section, select execute and type in this script. Refer this link https://github.com/VarunSinghRai/webprod/blob/master/images/webdev-job2-execute 
 3) Select Save and Apply
 
-Job 2 for Dev: Create a freestyle Project with name "WebDev-job2"
+Job 2 for Dev: Create a freestyle Project with name "WebProd-job2"
 1) In Build Trigger section, check "Build after other projects are built", fill "Webdev-job2" as Project to Watch and select button for "Trigger only if build is stable"
 2)  In the Build section, select execute and type in this script. Refer this link 
 https://github.com/VarunSinghRai/webprod/blob/master/images/webdprod-job2-execute
